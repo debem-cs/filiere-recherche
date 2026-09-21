@@ -322,7 +322,7 @@ interval.
 Let the Floquet multipliers be
 
 ```math
-\mu_i=\operatorname{eig}(M).
+\mu_i\in\sigma(M).
 ```
 
 Define the spectral radius
@@ -354,13 +354,13 @@ Therefore:
 Liouville's formula provides an independent numerical check:
 
 ```math
-\det M=\exp\left(\int_0^{2\pi}\operatorname{tr}A(\tau)\,d\tau\right).
+\det M=\exp\left(\int_0^{2\pi}\mathrm{tr}\,A(\tau)\,d\tau\right).
 ```
 
 Because
 
 ```math
-\operatorname{tr}A(\tau)=-2\delta,
+\mathrm{tr}\,A(\tau)=-2\delta,
 ```
 
 the exact determinant is
