@@ -85,60 +85,6 @@ No installation step is required. Clone the repository and run each script
 from the directory in which it is stored so that MATLAB can find the associated
 Simulink models and generated data.
 
-## Quick start
-
-### Model 1: open-loop simulations
-
-```matlab
-cd model1
-parameters_kapitza
-```
-
-To reproduce the four amplitude--frequency comparisons:
-
-```matlab
-exp_kapitza
-```
-
-### Model 2: open-loop simulation
-
-```matlab
-cd model2
-parameters_kapitza_model2
-```
-
-### Model 2: feedback comparison
-
-```matlab
-cd model2
-kapitza_controle
-```
-
-### Floquet stability map
-
-```matlab
-cd(fullfile('floquet-stability','stability-map'))
-kapitza_stability_map
-```
-
-The calculation writes its data and figures to the local `generated/`
-directory.
-
-### Nonlinear grid analysis
-
-The nonlinear grid study has its own execution order and data requirements.
-Follow the instructions in
-[`floquet-stability/sim-grid-analysis/README.md`](floquet-stability/sim-grid-analysis/README.md)
-before running its scripts.
-
-## Numerical-resolution note
-
-The excitation can be much faster than the pendulum response. The scripts that
-configure the solver limit the maximum integration step to a fraction of the
-excitation period. If the parameters or solver configuration are changed,
-retain a sufficiently small maximum step; otherwise, skipped excitation cycles
-can produce misleading apparent stability.
-
 ## Repository
 
 The project is hosted at
